@@ -38,3 +38,7 @@ const md = require('markdown-it')()
 **Tips**:
 If you want to use a different icon font,
 change the icon class and make sure the corresponding icon font is installed.
+
+## License
+
+MIT License
