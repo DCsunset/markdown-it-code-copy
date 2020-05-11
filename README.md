@@ -1,5 +1,8 @@
 # markdown-it-code-copy
 
+[![npm](https://img.shields.io/npm/v/markdown-it-code-copy.svg)](https://www.npmjs.com/package/markdown-it-code-copy)
+[![GitHub](https://img.shields.io/github/license/DCsunset/markdown-it-code-copy)](https://github.com/DCsunset/markdown-it-code-copy/blob/master/LICENSE)
+
 A markdown-it plugin to add a copy icon in code blocks to copy the code.
 
 ## Screenshots
