@@ -23,7 +23,7 @@ function renderCode(origRule, options) {
 		const [tokens, idx] = args;
 		const content = tokens[idx].content
 			.replaceAll('"', '&quot;')
-			.replaceAll("'", "&lt;");
+			.replaceAll("'", "&apos;");
 		const origRendered = origRule(...args);
 
 		if (content.length === 0)
