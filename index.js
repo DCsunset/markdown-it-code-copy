@@ -1,11 +1,12 @@
 const _ = require('lodash');
 
+let clipboard = null;
 try {
 	// Node js will throw an error
 	this === window;
 
 	const Clipboard = require('clipboard');
-	new Clipboard('.markdown-it-code-copy');
+	clipboard = new Clipboard('.markdown-it-code-copy');
 }
 catch (_err) {
 }
@@ -41,6 +42,14 @@ function renderCode(origRule, options) {
 }
 
 module.exports = (md, options) => {
+  if (clipboard) {
+    if (options.onSuccess) {
+      clipboard.on("success", options.onSuccess);
+    }
+    if (options.onError) {
+      clipboard.on("error", options.onError);
+    }
+  }
 	md.renderer.rules.code_block = renderCode(md.renderer.rules.code_block, options);
 	md.renderer.rules.fence = renderCode(md.renderer.rules.fence, options);
 };
