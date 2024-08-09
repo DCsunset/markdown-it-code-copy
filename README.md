@@ -37,6 +37,7 @@ const md = require('markdown-it')()
 | iconClass   | 'mdi mdi-content-copy'                                                        | The class of copy icon                    |
 | buttonStyle | 'position: absolute; top: 7.5px; right: 6px; cursor: pointer; outline: none;' | The style of the button wrapper           |
 | buttonClass | ''                                                                            | The class of the button wrapper           |
+| element     | ''                                                                            | Custom HTML element as button body        |
 | onSuccess   | undefined                                                                     | Function to call when copied successfully |
 | onError     | undefined                                                                     | Function to call when error occurred      |
 

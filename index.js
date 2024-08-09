@@ -15,7 +15,8 @@ const defaultOptions = {
 	iconStyle: 'font-size: 21px; opacity: 0.4;',
 	iconClass: 'mdi mdi-content-copy',
 	buttonStyle: 'position: absolute; top: 7.5px; right: 6px; cursor: pointer; outline: none;',
-	buttonClass: ''
+	buttonClass: '',
+  element: ''
 };
 
 function renderCode(origRule, options) {
@@ -34,7 +35,7 @@ function renderCode(origRule, options) {
 <div style="position: relative">
 	${origRendered}
 	<button class="markdown-it-code-copy ${options.buttonClass}" data-clipboard-text="${content}" style="${options.buttonStyle}" title="Copy">
-		<span style="${options.iconStyle}" class="${options.iconClass}"></span>
+		<span style="${options.iconStyle}" class="${options.iconClass}">${options.element}</span>
 	</button>
 </div>
 `;
@@ -42,14 +43,14 @@ function renderCode(origRule, options) {
 }
 
 module.exports = (md, options) => {
-  if (clipboard) {
-    if (options.onSuccess) {
-      clipboard.on("success", options.onSuccess);
-    }
-    if (options.onError) {
-      clipboard.on("error", options.onError);
-    }
-  }
+	if (clipboard) {
+		if (options.onSuccess) {
+			clipboard.on("success", options.onSuccess);
+		}
+		if (options.onError) {
+			clipboard.on("error", options.onError);
+		}
+	}
 	md.renderer.rules.code_block = renderCode(md.renderer.rules.code_block, options);
 	md.renderer.rules.fence = renderCode(md.renderer.rules.fence, options);
 };
