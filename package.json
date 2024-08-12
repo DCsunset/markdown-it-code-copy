@@ -1,6 +1,6 @@
 {
   "name": "markdown-it-code-copy",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A markdown-it plugin to add a copy icon in code blocks to copy the code",
   "main": "index.js",
   "scripts": {

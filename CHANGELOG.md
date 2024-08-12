@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.2.1](https://github.com/DCsunset/markdown-it-code-copy/compare/v0.2.0...v0.2.1) (2024-08-12)
+
+
+### Bug Fixes
+
+* fix dependencies in package-lock.json ([ba93217](https://github.com/DCsunset/markdown-it-code-copy/commit/ba93217bdf58173d01c2785a8bdc964f7901d2bc))
+
 ## [0.2.0](https://github.com/DCsunset/markdown-it-code-copy/compare/v0.1.2...v0.2.0) (2024-08-12)
 
 
