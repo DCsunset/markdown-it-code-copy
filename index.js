@@ -1,4 +1,4 @@
-const _ = require('lodash');
+const merge = require('lodash.merge');
 
 let clipboard = null;
 try {
@@ -20,7 +20,7 @@ const defaultOptions = {
 };
 
 function renderCode(origRule, options) {
-	options = _.merge(defaultOptions, options);
+	options = merge(defaultOptions, options);
 	return (...args) => {
 		const [tokens, idx] = args;
 		const content = tokens[idx].content
