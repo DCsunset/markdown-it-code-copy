@@ -1,3 +1,4 @@
 markdown-it-code-copy-*.tgz
 .history
 node_modules
+*.iml
